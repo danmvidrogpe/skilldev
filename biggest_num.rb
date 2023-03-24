@@ -1,20 +1,22 @@
-puts "Digite um número"
-num1 = gets.chomp.to_i
-puts "Digite um número"
-num2 = gets.chomp.to_i
-puts "Digite um número"
-num3 = gets.chomp.to_i
+puts "Quantos números deseja inserir? "
+count = gets.chomp.to_i
 
+puts "Digite os números: "
+
+numbers = []
+index = 0
 biggest = 0
 
-if num1 > num2
-	biggest = num1
-else
-	biggest = num2
+while index < count
+	numbers[index] = gets.chomp.to_i
+	index += 1
 end
 
-if num3 > biggest
-	biggest = num3
+numbers.each do |num|
+	if num > biggest
+		biggest = num
+		position += 1
+	end
 end
 
 puts "O maior número é #{biggest}"
