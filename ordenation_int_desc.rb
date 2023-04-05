@@ -1,4 +1,8 @@
-numbers = [5, 6, 9, -4, 2, 3, 10]
+rand_array = []
+
+numbers = (1..10).map do |number|
+  rand(0..100)
+end
 
 numbers_ord = []
 
